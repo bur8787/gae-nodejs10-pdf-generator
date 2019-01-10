@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <style type="text/css">
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .wrapper {
+            max-width: 940px;
+            margin: 0 auto;
+        }
+
+        .date {
+            text-align: right;
+        }
+
+        .title {
+            width: 100%;
+            text-align: center;
+
+            letter-spacing: 5px;
+        }
+
+        .main-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .main-table td {
+            border: 1px solid #888888;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <div class="date">date ${date}</div>
+
+    <h1 class="title">Title</h1>
+
+    <table class="main-table">
+        <tr>
+            <td rowspan="4">header1</td>
+            <td>header2</td>
+            <td>${data1}</td>
+        </tr>
+        <tr>
+            <td>header2</td>
+            <td>${data2}</td>
+        </tr>
+        <tr>
+            <td>header2</td>
+            <td>${data3}</td>
+        </tr>
+    </table>
+
+</div>
+
+</body>
+
+</html>
