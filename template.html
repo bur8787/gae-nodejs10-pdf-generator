@@ -41,23 +41,23 @@
 
 <div class="wrapper">
 
-    <div class="date">date ${date}</div>
+    <div class="date">date <%= header.date %></div>
 
-    <h1 class="title">Title</h1>
+    <h1 class="title"><%= header.title %></h1>
 
     <table class="main-table">
         <tr>
             <td rowspan="4">header1</td>
             <td>header2</td>
-            <td>${data1}</td>
+            <td><%= table.data1 %></td>
         </tr>
         <tr>
             <td>header2</td>
-            <td>${data2}</td>
+            <td><%= table.data2 %></td>
         </tr>
         <tr>
             <td>header2</td>
-            <td>${data3}</td>
+            <td><%= table.data3 %></td>
         </tr>
     </table>
 

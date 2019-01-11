@@ -2,6 +2,7 @@ const express = require('express');
 const puppeteer = require('puppeteer');
 const app = express();
 
+const ejs = require('ejs')
 const fs = require('fs');
 
 app.use(async (req, res) => {
@@ -11,7 +12,21 @@ app.use(async (req, res) => {
 
   const page = await browser.newPage();
 
-  const html = fs.readFileSync('./template.html', 'utf-8');
+  const template = fs.readFileSync('./template.html', 'utf-8');
+
+  const data = {
+    header: {
+      title: "This is title.",
+      date: new Date().toLocaleDateString()
+    },
+    table: {
+      data1: "This is data1.",
+      data2: "This is data1.",
+      data3: "This is data1.",
+    }
+  }
+
+  const html = ejs.render(template, data);
 
   await page.setContent(html);
   const pdf = await page.pdf({
