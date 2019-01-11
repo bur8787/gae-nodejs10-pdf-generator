@@ -28,9 +28,6 @@ app.use(async (req, res) => {
 
   res.set('Content-Type', 'application/pdf');
   res.send(pdf);
-
-  // res.send(html);
-  // res.send("Hello, World");
 });
 const server = app.listen(process.env.PORT || 8080, err => {
   if (err) return console.error(err);
